@@ -308,15 +308,12 @@ class Assembler:
 def main():
     usage = 'usage: spu <source> <destination>'
 
-    source_name = argv[1] if len(argv) >= 2 else None
-    dest_name = argv[2] if len(argv) >= 3 else None
+    source_name = argv[1] if len(argv) >= 2 else 'program.txt'
+    dest_name = argv[2] if len(argv) >= 3 else 'output.txt'
 
     if source_name == '--help':
         print(usage)
         return
-
-    source_name = 'program.txt'
-    dest_name = 'output.txt'
 
     if source_name is not None:
         if os.path.isfile(source_name):
